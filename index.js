@@ -4,6 +4,14 @@ const members = require("./Members");
 
 const app = express();
 
+const logger = (req, res, next) => {
+  console.log("Hello");
+  next();
+};
+
+//Init middleware
+app.use(logger);
+
 //Gets all members
 app.get("/api/members", (req, res) => res.json(members));
 
