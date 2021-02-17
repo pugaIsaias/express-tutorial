@@ -11,10 +11,12 @@
     <input type="submit" value="Add Member" class="btn btn-primary btn-block">
 </form>
 <h4>Members</h4>
-<ul>
+<ul class="list-group">
     {{#each members}}
     <li class="list-group-item">
         {{this.name}}: {{this.email}}
     </li>
     {{/each}}
 </ul>
+
+<a href="/api/members" class="btn btn-light mt-4">Visit API</a>
